@@ -1,0 +1,45 @@
+<div class="px-5">
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h2 class="h2">Books List</h2>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col-2">Name</th>
+          <th scope="col-2">Author Name</th>
+          <th scope="col-2">Edition</th>
+          <th scope="col-2">Published Year</th>
+          <th scope="col-2">Purchase Price</th>
+          <th scope="col-2">Selling Price</th>
+          <th scope="col-2">Stocks</th>
+          <th scope="col-2">Max Per User</th>
+          <th scope="col-2">Description</th>
+          <th scope="col-2">Author Info</th>
+          <th class="text-center" scope="col-2">Edit</th>
+          <th class="text-center" scope="col-2">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of Books; let i = index">
+          <td>{{book.bookName}}</td>
+          <td>{{book.authorName}}</td>
+          <td>{{book.edition}}</td>
+          <td>{{book.publishedYear}}</td>
+          <td>{{book.purchasePrice}}</td>
+          <td>{{book.sellingPrice}}</td>
+          <td>{{book.stock}}</td>
+          <td>{{book.maxCountPerUser}}</td>
+          <td>{{book.description}}</td>
+          <td>{{book.authorDetails}}</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-primary" routerLink="/edit-book/{{book._id}}">Edit</button>
+          </td>
+          <td class="text-center"> <button class="btn btn-sm btn-danger" (click)="delete(book._id, i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

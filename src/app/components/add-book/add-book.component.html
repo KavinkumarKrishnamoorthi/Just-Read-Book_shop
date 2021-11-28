@@ -1,0 +1,130 @@
+<div class="row justify-content-center my-3">
+  <div class="col-md-12 px-5">
+    <div class="card-body">
+      <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <h5> Book Details</h5>
+        <div class="form-group row p-3 card-shadow-add-books">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Book Name</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" formControlName="bookName" placeholder="Name of the book"
+                    required>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Author Name</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" formControlName="authorName" placeholder="Name of the author"
+                    required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 class="pt-3"> About Books </h5>
+        <div class="form-group row p-3 card-shadow-add-books">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Edition</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" formControlName="edition" placeholder="Edition of the book"
+                    required>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Published Year</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="number" formControlName="publishedYear"
+                    placeholder="Book published year(optional)">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 class="pt-3"> Pricing </h5>
+        <div class="form-group row p-3 card-shadow-add-books">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Purchase Price</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="number" formControlName="purchasePrice"
+                    placeholder="Book purchase price" required>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Selling Price</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="number" formControlName="sellingPrice"
+                    placeholder="Book selling price" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h5 class="pt-3"> Stocks </h5>
+        <div class="form-group row p-3 card-shadow-add-books">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Stock</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="number" formControlName="stock"
+                    placeholder="No. of books received(optional)" required>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Max Per User</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="number" placeholder="How many books can a user buy(optional)"
+                    formControlName="maxCountPerUser" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="pt-3"> More Info </h5>
+        <div class="form-group row p-3 card-shadow-add-books">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Description</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" formControlName="description"
+                    placeholder="More about book(optional)" required>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <label class="col-sm-3 col-form-label label-font">Author Details</label>
+                <div class="col-sm-9">
+                  <input class="form-control" type="text" formControlName="authorDetails"
+                    placeholder="More about author(optional)" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group row py-4 px-0">
+          <div class="col-12 text-center"> <button class="btn btn-primary btn-block" type="submit">Add
+              Book</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
